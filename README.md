@@ -2,7 +2,9 @@
 EmuTool
 Move, Copy, Convert, Backup and Restore your SXOS and Atmosphere Emunand/emuMMC.
 
-<img src="https://gbatemp.net/attachments/upload_2019-11-18_20-25-34-png.187157/" />
+For support go to GBATemp, <a href="https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/">click here</a>: 
+
+<center><img src="https://gbatemp.net/attachments/upload_2019-11-18_20-25-34-png.187157/" /></center>
 (Art by @CrazyKing93)​
 
 (Emunand or emuMMC are the same concept, below will be referred to simply as Emu)
@@ -10,40 +12,37 @@ Move, Copy, Convert, Backup and Restore your SXOS and Atmosphere Emunand/emuMMC.
 Italian language guide <a href="https://graph.org/EmuTools-migrazione-backup-e-dintorni-per-la-tua-emuMMC-eo-Emunand-10-21">here</a>
 
 Warning!
-Antivirus program can block and delete EmuTools.
-EmuTool uses these functions of Windows Kernel32: CreateFile, CloseHandle, DeviceIoControl, SetFilePointer, ReadFile, GetFileSize, WriteFile, FlushFileBuffer, LockFile, UnlockFile
-Check source code in second post if you need.
-
+Antivirus program can block and delete EmuTools.<br />
+EmuTool uses these functions of Windows Kernel32: CreateFile, CloseHandle, DeviceIoControl, SetFilePointer, ReadFile, GetFileSize, WriteFile, FlushFileBuffer, LockFile, UnlockFile<br />
+Check source code if you need.
+<br />
 
 1. What is it for?
 
-    Move the Hidden partition Emu (Atmosphere\SXOS) on a new (bigger?) SD
-    For SXOS it allows to switch from Emu on partition mode to Emu on file and vice versa, so you can have two Emunand on the same SD card.
-    Change your Emu format from Atmosphere to SX OS and viceversa and from Hidden partition Emu to Emu on file
-    Backup and restore of every type of Emu.
-    Create a new Emu (for experiments?) starting from you current Hekate/SXOS backup or from your current Emu
-    Split an Hekate backup in multiple files ready for fat32 partitions
-    Create the relevant configuration files to boot the Emu (emummc.ini, raw_based, file_based and folder structure)
+    - Move the Hidden partition Emu (Atmosphere\SXOS) on a new (bigger?) SD
+	- On SXOS allows to switch between hidden partition and file Emunand mode, so you can have two Emunand on the same SD card.
+	- Change your Emu format from Atmosphere to SX OS and viceversa and from Hidden partition Emu to Emu on file
+	- Backup and restore of every type of Emu.
+	- Create a new Emu (for experiments?) starting from you current Hekate/SXOS backup or from your current Emu
+	- Split an Hekate backup in multiple files ready for fat32 partitions
+	- Create the relevant configuration files to boot the Emu (emummc.ini, raw_based, file_based and folder structure)
 
 
 2. Using the Tool
-To access the SD partitions run EmuTool.exe with administrator rights, it should already request it, if not please do a right click and choos Run as Administrator...
-To start, double click on the EmuTool.exe file and confirm the administrative rights if necessary
+To access the SD partitions run EmuTool.exe <strong>with administrator rights</strong>, it should already ask for it, if not please do a right click and choose Run as Administrator...
+To start, double click on the EmuTool.exe file and confirm administrative rights if necessary.
 EmuTool requires that you select a source (Source), ie where to read the Emu, and a destination (Target), ie where to write the copy of the Emu.
 Both Source and Target support Partition and Files.
 When Source and Destination are set press the Start button to start copying.
 (I apologize for the UI quality. This was a tool created just for me and I wanted to keep it lightweight, free of dependencies, no installation and easily usable, as I think a tool so limited and specific should be)​
-
-[​IMG]
-​
-
+<center><img src="https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2Ffefd4f169c294b50ab045.png&hash=90ea5814b82e156322c14505799948d4"></center>
 
 
 3. How to Select SD card and File
 After selecting the type of Emu you want as a Source or Target, click on the "white" box with the words "Click to select SD Card" in the frame relating to the Emu type selection.
 A navigation window will appear depending on the Emu type selected
 In case of Partition type, the following window will appear​
-[​IMG]​
+<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F2f2820ee5df6c9f967084.png&hash=dec5094e5f5588bc5ef55e7d6ee5bf2b"></center>
 ​
 Selecting the drive containing the SD shows a list of the partitions present on the SD card.
 The Sector field located at the bottom right is important.
@@ -52,29 +51,20 @@ If you select a partition from the list, then the initial sector of the partitio
 No partition selection for SXOS as it is fixed to 0x2 on the first patition.
 If something is wrong then you can correct the value, in hex (with notation 0x as in 0x02AC2300) or in decimal (for example the value read from Minitool Partition Wizard)
 
-Confirmed with Ok the main screen displays the data related to the Emu to read
-​
-[​IMG]​
-
+After confirmed with Ok the main screen displays the data related to the Emu to read
+<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F2ddc5984d870dcf2e91c2.png&hash=498cc8582bff0f9143fc5faf595c32a9"></center>
 
 If you choose The File Type Emu the following window will appear
-​
-[​IMG]​
-
+[<center><img src="https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F8332cd2bcd1ae3168afb9.png&hash=92d1113a6b2a882892a1fc2307fffc0b"></center>
 
 Select the destination folder and the path will be shown on the main screen in the white box
-​
-
-[​IMG]​
+<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2Fd50f510cc9fecee6194f1.png&hash=f9796b2411c5e16cfdf287828f4e87a4"></center>
 
 When everything is set as desired press Start.​
 
-
-4. Enabling / disabling Emunand SXOS on partition (allows to start emunand on file)
+4. Enabling/disabling Emunand SXOS on partition (allows to start emunand on file)
 Select Source SXOS hidden partition and click the white box to select the SD card drive. When SD is selected two new buttons will appear in the main window
-
 [​IMG]​
-
 
 WARNING!!!
 No check is made on the actual existence of Emunand, so you can enable emu on partition even if this partition does not exist.
