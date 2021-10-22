@@ -5,7 +5,7 @@ Move, Copy, Convert, Backup and Restore your SXOS and Atmosphere Emunand/emuMMC.
 For support go to GBATemp, <a href="https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/">click here</a>: 
 
 <center><img src="https://gbatemp.net/attachments/upload_2019-11-18_20-25-34-png.187157/" /></center>
-(Art by @CrazyKing93)​
+(Art by @CrazyKing93)
 
 (Emunand or emuMMC are the same concept, below will be referred to simply as Emu)
 
@@ -34,16 +34,16 @@ To start, double click on the EmuTool.exe file and confirm administrative rights
 EmuTool requires that you select a source (Source), ie where to read the Emu, and a destination (Target), ie where to write the copy of the Emu.
 Both Source and Target support Partition and Files.
 When Source and Destination are set press the Start button to start copying.
-(I apologize for the UI quality. This was a tool created just for me and I wanted to keep it lightweight, free of dependencies, no installation and easily usable, as I think a tool so limited and specific should be)​
-<center><img src="https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2Ffefd4f169c294b50ab045.png&hash=90ea5814b82e156322c14505799948d4"></center>
+(I apologize for the UI quality. This was a tool created just for me and I wanted to keep it lightweight, free of dependencies, no installation and easily usable, as I think a tool so limited and specific should be)
+<center><img src="https://telegra.ph/file/fefd4f169c294b50ab045.png"></center>
 
 
 3. How to Select SD card and File
 After selecting the type of Emu you want as a Source or Target, click on the "white" box with the words "Click to select SD Card" in the frame relating to the Emu type selection.
 A navigation window will appear depending on the Emu type selected
-In case of Partition type, the following window will appear​
-<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F2f2820ee5df6c9f967084.png&hash=dec5094e5f5588bc5ef55e7d6ee5bf2b"></center>
-​
+In case of Partition type, the following window will appear
+<center><img src="https://telegra.ph/file/2f2820ee5df6c9f967084.png"></center>
+
 Selecting the drive containing the SD shows a list of the partitions present on the SD card.
 The Sector field located at the bottom right is important.
 The first value is read by emummc.ini if it is correct, check the emummc.ini file in the emummc folder of the SD card if this value is incorrect. If you are using Kosmos simply select the Emu from the emuMMC menu.
@@ -52,19 +52,19 @@ No partition selection for SXOS as it is fixed to 0x2 on the first patition.
 If something is wrong then you can correct the value, in hex (with notation 0x as in 0x02AC2300) or in decimal (for example the value read from Minitool Partition Wizard)
 
 After confirmed with Ok the main screen displays the data related to the Emu to read
-<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F2ddc5984d870dcf2e91c2.png&hash=498cc8582bff0f9143fc5faf595c32a9"></center>
+<center><img src="https://telegra.ph/file/2ddc5984d870dcf2e91c2.png"></center>
 
 If you choose The File Type Emu the following window will appear
-[<center><img src="https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2F8332cd2bcd1ae3168afb9.png&hash=92d1113a6b2a882892a1fc2307fffc0b"></center>
+[<center><img src="https://telegra.ph/file/8332cd2bcd1ae3168afb9.png"></center>
 
 Select the destination folder and the path will be shown on the main screen in the white box
-<center><img src="​https://gbatemp.net/proxy.php?image=https%3A%2F%2Ftelegra.ph%2Ffile%2Fd50f510cc9fecee6194f1.png&hash=f9796b2411c5e16cfdf287828f4e87a4"></center>
+<center><img src="https://telegra.ph/file/d50f510cc9fecee6194f1.png"></center>
 
-When everything is set as desired press Start.​
+When everything is set as desired press Start.
 
 4. Enabling/disabling Emunand SXOS on partition (allows to start emunand on file)
 Select Source SXOS hidden partition and click the white box to select the SD card drive. When SD is selected two new buttons will appear in the main window
-[​IMG]​
+[IMG]
 
 WARNING!!!
 No check is made on the actual existence of Emunand, so you can enable emu on partition even if this partition does not exist.
@@ -76,12 +76,12 @@ You can now prepare a SXOS Emunand file.
 Select the SXOS File type as Target, select the SD root as the path and press Start to create a copy of your Emunand partition in Emunand file, without the need to use hard disk and without having to reload the cfw files on the SD.
 EmuTool Create the sxos/Emunand folder starting from the point you choose as the destination folder. Inside the Emunand foledr you will find the Emunand files.
 
-​
+
 5. Change SD for those who have Emu on partition
 To bring the Emu to the new SD there are two possibilities:
 1 - Copy the Emu to file and use it in File mode (see section 6)
 2 - Create a special partition of at least 30GByte on the new SD and transfer the Emu on it, however, requires the passage at point 1 (first go to section 6 and then to section 7)
-​
+
 6. Convert partition Emu in Emu on File
 Select as Source the type of partiton Emu, Atmosphere or SXOS, you want to read/copy and then select the SD card by clicking on the white box.
 Select as Target the type of Emu on file you want to get and click on the white box to select a destination path.
@@ -89,12 +89,12 @@ The Emu-related folders will be created, ready to be copied to the SD root. In t
 For SXOS the sxos folder is created and within it the Emunand folder is created. For Atmosphere the emuMMC folder is created, the emummc.ini file compiled and the HPE0 folder which will contain the eMMC folder with the Emu files and the file_based file needed by Kosmos\Hekate\Nyx.
 
 Press Start to begin.
-​
+
 7. Transfer of the Emu to partition
 Select as Source the Emu File type and select the folder that contains the Emu files, not the root folder (ie choose sxos\Emunand or emummc\HE0\eMMC folders).
 Select as Target the type of partition Emu that you want to restore, in case of Atmosphere type you will also have to indicate the initial sector of the partition you created to host the Emu. Please check the other tutorial on how to create a suitable partition for emuMMC (you can use the free minitool partition software).
 
-Press the Start button to start copying.​
+Press the Start button to start copying.
 
 6. Conclusion
 For any other operation you can think of, the way to select the SD reader and browse through the folders does not change, so I guess I shouldn't bother you with unnecessary chatter ;-)
